@@ -17,7 +17,7 @@ public class ImageEditorFrame extends JFrame {
 		setSize(400, 300);
 		setVisible(true);
 		
-		setTitle("Image Editor");
+		setTitle("Nope!");
 		add(panel);
 		createMenuBar();
 		setDummyImage();
