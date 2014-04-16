@@ -26,6 +26,7 @@ public class ImageEditorFrame extends JFrame {
 			}
 		);
 	}
+	
 	private void onOpen() {
 		JOptionPane.showMessageDialog(this, "Open Selected");
 	}
