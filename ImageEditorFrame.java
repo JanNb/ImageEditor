@@ -2,10 +2,11 @@
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-import javax.swing.JFrame;
-
+import javax.imageio.ImageIO;
 import javax.swing.*;
+
 import java.awt.event.*;
+import java.io.*;
 
 
 
@@ -50,13 +51,19 @@ public class ImageEditorFrame extends JFrame {
 	}
 	
 	private void onOpen() {
-		JOptionPane.showMessageDialog(this, "Open Selected");
+		try {
+			JFileChooser fileChooser = new JFileChooser();
+			fileChooser.showOpenDialog(this);
+			File file = fileChooser.getSelectedFile();
+			BufferedImage image = ImageIO.read(file);
+			panel.setImage(image);
+		} catch (IOException e) {
+			JOptionPane.showMessageDialog(this,"Die Datei konnte geoeffnet werden");
+		}
 	}
 	
 
 	public static void main(String[] args) {
 		ImageEditorFrame editorFrame = new ImageEditorFrame();
-		
-		
 	}
 }
