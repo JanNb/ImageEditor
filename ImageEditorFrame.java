@@ -16,7 +16,7 @@ public class ImageEditorFrame extends JFrame {
 		setSize(400, 300);
 		setVisible(true);
 		
-		setTitle("Jan ist bloed!");
+		setTitle("Image Editor");
 		add(panel);
 		createMenuBar();
 		setDummyImage();
