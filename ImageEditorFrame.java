@@ -7,6 +7,8 @@ public class ImageEditorFrame extends JFrame {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setSize(400, 300);
 		setVisible(true);
+		
+		setTitle("Jan ist bloed!");
 	}
 	
 	private void createMenuBar() {
